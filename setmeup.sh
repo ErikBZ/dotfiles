@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# manual
+add-apt-repository ppa:kgilmer/speed-ricer
+
 apt update
 apt upgrade -y
 
@@ -11,7 +14,7 @@ apt install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-ic
             -y 
 
 # the stuff i actually wanted
-apt install curl wget i3-gaps feh vim git zsh arandr compton rofi lxappearance nautillis neovim -y
+apt install curl wget i3-gaps feh vim git zsh arandr compton rofi lxappearance nautilis neovim -y
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -21,7 +24,7 @@ mkdir -p ~/.fonts
 cp ./zshrc ~/.zshrc
 cp ./tmux.conf ~/.tmux.conf
 cp ./vimrc ~/.vimrc
-cp ./i3config ~/.config/i3/config
+cp ./i3/config ~/.config/i3/config
 
 # dependancy for i3
 wget -O /tmp/playerctl.deb https://github.com/altdesktop/playerctl/releases/download/v2.0.2/playerctl-2.0.2_amd64.deb
@@ -40,8 +43,8 @@ wget -O /tmp/AnkaC.zip https://storage.googleapis.com/google-code-archive-downlo
 wget -O /tmp/fontawesome.tar.gz https://github.com/FortAwesome/Font-Awesome/archive/5.11.2.tar.gz
 unzip  -d ~/.fonts /tmp/*.zip
 
-tar -C ~/.fonts -xzf /tmp/fontawesome.tar.gz --wildcards "*.tff" --strip-components
-rm -rf ~/.fonts/@fontawesome
+tar -C ~/.fonts -xzf /tmp/fontawesome.tar.gz --wildcards "*.ttf" --strip-components 2
+rm -rf ~/.fonts/@fortawesome
 
 # vscode
 
