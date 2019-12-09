@@ -14,7 +14,7 @@ apt install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-ic
             -y 
 
 # the stuff i actually wanted
-apt install curl wget i3-gaps feh vim git zsh arandr compton rofi lxappearance nautilis neovim -y
+apt install curl wget i3-gaps feh git zsh arandr compton rofi lxappearance neovim -y
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -35,7 +35,9 @@ wget -O /tmp/polybar.tar https://github.com/polybar/polybar/releases/download/3.
 tar -xf /tmp/polybar.tar -C /tmp/
 
 # this needs some interaction
+cd /tmp/polybar/
 /tmp/polybar/build.sh
+cd -
 
 # fonts
 wget -O /tmp/AnkaCC.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/anka-coder-fonts/AnkaCoderCondensed.1.100.zip

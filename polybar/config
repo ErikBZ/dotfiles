@@ -12,18 +12,18 @@
 background        = #1d1d1d
 background-alt    = ${xrdb:foreground:#222}
 
-foreground        = ${xrdb:foreground:#222}
-foreground-alt    = ${xrdb:background:#222}
+foreground        = ${xrdb:foreground:#eee}
+foreground-alt    = ${xrdb:background:#aaa}
 
-shade0            = ${xrdb:color7:#222}
-shade1            = ${xrdb:color7:#222}
-shade2            = ${xrdb:color7:#222}
-shade3            = ${xrdb:color7:#222}
-shade4            = ${xrdb:color7:#222}
-shade5            = ${xrdb:color7:#222}
-shade6            = ${xrdb:color7:#222}
+shade0            = ${xrdb:color7:#200}
+shade1            = ${xrdb:color7:#020}
+shade2            = ${xrdb:color7:#002}
+shade3            = ${xrdb:color7:#220}
+shade4            = ${xrdb:color7:#022}
+shade5            = ${xrdb:color7:#202}
+shade6            = ${xrdb:color7:#555}
 shade7            = #ffffff
-shade8            = ${xrdb:color8:#222}
+shade8            = ${xrdb:color8:#550}
 
 [constants]
 padding = 1
@@ -44,8 +44,8 @@ line-color            = #f00
 line-size             = 0
 module-margin-left    = 0
 module-margin-right   = 0
-monitor               = DP-1-1
-monitor-fallback      = eDP-1-1
+;monitor               = Virtual1
+;monitor-fallback      = eDP-1-1
 offset-x              = 90%:-16
 offset-y              = 16
 override-redirect     = true
@@ -60,7 +60,7 @@ width                 = 10%
 modules-center         = pulseaudio wlan battery  
 modules-right = date
 
-font-0 = mononoki Nerd Font:weight=bold:fontformat=truetype:size=19:antialias=true;4
+font-0 = mononoki Nerd Font:weight=bold:fontformat=truetype:size=10:antialias=true;4
 font-1 = Roboto Condensed:fontformat=truetype:size=16:antialias=true;4
 
 [bar/middle]
@@ -244,11 +244,11 @@ wrapping-scroll             = false
 ;8messaging
 ;9
 ;0
-ws-icon-0                   = 1;爵
-ws-icon-1                   = 2;
-ws-icon-2                   = 3;
-ws-icon-3                   = 4;
-ws-icon-4                   = 5;
+ws-icon-0                   = 1;1
+ws-icon-1                   = 2;2
+ws-icon-2                   = 3;3
+ws-icon-3                   = 4;4
+ws-icon-4                   = 5;5
 ws-icon-5                   = 6;
 ws-icon-6                   = 7;
 ws-icon-7                   = 8;
