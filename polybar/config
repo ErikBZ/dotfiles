@@ -8,9 +8,6 @@
 ;			https://github.com/polybar/polybar
 ;==========================================================
 
-
-; colors are fucky on my machine right now so all the colors are the same
-; hah that was it
 [colors]
 background        = #1d1d1d
 background-alt    = ${xrdb:foreground:#222}
@@ -42,15 +39,13 @@ cursor-click          = pointer
 cursor-scroll         = ns-resize
 fixed-center          = true
 foreground            = ${colors.foreground}
-height                = 42
+height                = 30
 line-color            = #f00
 line-size             = 0
 module-margin-left    = 0
 module-margin-right   = 0
-;monitor               = Virtual1
-;monitor-fallback      = eDP-1-1
 offset-x              = 90%:-16
-offset-y              = 16
+offset-y              = 10
 override-redirect     = true
 padding-left          = 0
 padding-right         = 0
@@ -60,24 +55,23 @@ scroll-up             = i3wm-wsnext
 tray-position         = none
 width                 = 10%
 
-modules-center         = pulseaudio wlan battery  
+;modules-center         = pulseaudio 
 modules-right = date
 
 font-0 = mononoki Nerd Font:weight=bold:fontformat=truetype:size=10:antialias=true;4
-font-1 = Roboto Condensed:fontformat=truetype:size=16:antialias=true;4
+font-1 = Roboto Condensed:fontformat=truetype:size=10:antialias=true;4
 
 [bar/middle]
 inherit = bar/right
 
 offset-x              = 40%
-offset-y              = 16
+offset-y              = 10
 width                 = 20%
 background-0    = #1d1d1d
 background-1    = #1d1d1d
 modules-left        = 
 modules-center        = i3
 modules-right        = 
-
 ;    _          _   _                
 ;   | |__  __ _| |_| |_ ___ _ _ _  _ 
 ;   | '_ \/ _` |  _|  _/ -_) '_| || |
@@ -432,5 +426,7 @@ compositing-foreground  = source
 screenchange-reload     = true
 
 [global/wm]
+
 margin-bottom = 940
 margin-top    = 940
+  

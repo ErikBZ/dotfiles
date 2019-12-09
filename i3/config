@@ -1,39 +1,23 @@
-#
-#  $$$$$$\  $$$$$$\         $$$$$$\   $$$$$$\  $$$$$$$\   $$$$$$\  
-#  \_$$  _|$$ ___$$\       $$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\ 
-#    $$ |  \_/   $$ |      $$ /  \__|$$ /  $$ |$$ |  $$ |$$ /  \__|
-#    $$ |    $$$$$ /       $$ |$$$$\ $$$$$$$$ |$$$$$$$  |\$$$$$$\  
-#    $$ |    \___$$\       $$ |\_$$ |$$  __$$ |$$  ____/  \____$$\ 
-#    $$ |  $$\   $$ |      $$ |  $$ |$$ |  $$ |$$ |      $$\   $$ |
-#  $$$$$$\ \$$$$$$  |      \$$$$$$  |$$ |  $$ |$$ |      \$$$$$$  |
-#  \______| \______/        \______/ \__|  \__|\__|       \______/ 
-#                                                                
-
-for_window [class = ".*"] title_format "%title ... %class"
-font pango: Anka Coder 10
-title_align center
-
-gaps inner 10
-gaps outer 0
-gaps top 10
-gaps bottom 0
-
 set $mod Mod4
 
-# testing
+# Border stuff
 hide_edge_borders both
 new_window pixel 3
+for_window [class   = ".*"] border pixel 3
 
-exec --no-startup-id compton -b -f
+# Gaps Stuff
+gaps inner 10
+gaps outer 0
+gaps top 0
+gaps bottom 0
 
+# This stuff doesn't actually show up
 font pango: Anka Coder 10
 for_window [class   = ".*"] title_format "%title  ⋯  %class" 
 title_align center
 
-gaps inner 10
-gaps outer 0
-gaps top 55
-gaps bottom 0
+# Restart polybar
+bindsym $mod+0 exec desktop-refresh.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -61,6 +45,7 @@ bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+j move left
+
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
@@ -120,7 +105,6 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -170,9 +154,18 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#}
+bar {
+	i3bar_command i3bar -t
+
+        position top
+	tray_output none
+	workspace_buttons no
+	height 35
+
+	colors {
+		background #000000000
+	}
+}
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -189,4 +182,4 @@ bindsym XF86AudioPrev exec playerctl previous
 # no-startup-id is only for logging
 exec --no-startup-id startup.sh
 exec --no-startup-id firefox
-
+exec --no-startup-id compton -b -f

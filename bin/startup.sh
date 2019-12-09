@@ -1,4 +1,4 @@
 #!/bin/bash
 
+polybar middle &
 polybar right &
-polybar moddle &
