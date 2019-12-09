@@ -8,6 +8,9 @@
 ;			https://github.com/polybar/polybar
 ;==========================================================
 
+
+; colors are fucky on my machine right now so all the colors are the same
+; hah that was it
 [colors]
 background        = #1d1d1d
 background-alt    = ${xrdb:foreground:#222}
@@ -74,6 +77,7 @@ background-1    = #1d1d1d
 modules-left        = 
 modules-center        = i3
 modules-right        = 
+
 ;    _          _   _                
 ;   | |__  __ _| |_| |_ ___ _ _ _  _ 
 ;   | '_ \/ _` |  _|  _/ -_) '_| || |
@@ -428,8 +432,5 @@ compositing-foreground  = source
 screenchange-reload     = true
 
 [global/wm]
-
-; vim:ft        = dosini
-  margin-bottom = 940
-  margin-top    = 940
-  
+margin-bottom = 940
+margin-top    = 940
