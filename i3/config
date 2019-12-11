@@ -16,14 +16,14 @@ font pango: Anka Coder 10
 for_window [class   = ".*"] title_format "%title  ⋯  %class" 
 title_align center
 
-# Restart polybar
+# Restart polybar, reload xrdb
 bindsym $mod+0 exec desktop-refresh.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec rxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -79,10 +79,6 @@ bindsym $mod+Shift+space floating toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
-
-# switch to workspace
 # replace these with different fonts later
 set $ws1 "1"
 set $ws2 "2"
@@ -115,6 +111,10 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
+
+# move some programs to other workspaces
+for_window [class = "discord"] move window to workspace $ws8
+for_window [class = "Spotify"] move window to workspace $ws9
 
 
 # reload the configuration file
@@ -176,8 +176,14 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# always stuff
+#exec_always
+
 # startup stuff
 # no-startup-id is only for logging
 exec --no-startup-id startup.sh
 exec --no-startup-id firefox
+exec --no-startup-id discord
+exec --no-startup-id spotify
+
 exec --no-startup-id compton -b -f

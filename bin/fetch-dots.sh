@@ -20,6 +20,9 @@ cp $HOME/.vimrc $PROJECT/vimrc
 cp $HOME/.gtkrc-2.0 $PROJECT/gtk/gtk-2.0
 cp $HOME/.config/gtk-3.0/settings.ini $PROJECT/gtk/gtk-3.0-settings.ini
 
+# X stuff
+cp $HOME/.Xresources $PROJECT/Xstuff/Xresources
+
 # bin stuff
 cp /usr/local/bin/desktop-refresh.sh $PROJECT/bin/desktop-refresh.sh
 cp /usr/local/bin/fetch-dots.sh $PROJECT/bin/fetch-dots.sh

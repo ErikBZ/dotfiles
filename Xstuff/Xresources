@@ -1,0 +1,3 @@
+URxvt.font: xft:Input Mono:size=10
+URxvt.scrollBar: false
+
