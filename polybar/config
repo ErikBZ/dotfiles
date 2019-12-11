@@ -60,6 +60,9 @@ modules-right = date
 
 font-0 = mononoki Nerd Font:weight=bold:fontformat=truetype:size=10:antialias=true;4
 font-1 = Roboto Condensed:fontformat=truetype:size=10:antialias=true;4
+font-2 = Font Awesome 5 Brands:size=10;3
+font-3 = Font Awesome 5 Free:size=10;3
+font-4 = Font Awesome 5 Free Solid:size=10;3
 
 [bar/middle]
 inherit = bar/right
@@ -231,27 +234,15 @@ pin-workspaces              = false
 type                        = internal/i3
 wrapping-scroll             = false
 
-;strip-wsnumbers            = true
-;1browser
-;2code
-;3code
-;4files
-;5media
-;6torrents
-;7design
-;8messaging
-;9
-;0
-ws-icon-0                   = 1;1
-ws-icon-1                   = 2;2
+ws-icon-0                   = 1;
+ws-icon-1                   = 2;
 ws-icon-2                   = 3;3
 ws-icon-3                   = 4;4
 ws-icon-4                   = 5;5
-ws-icon-5                   = 6;
-ws-icon-6                   = 7;
-ws-icon-7                   = 8;
-ws-icon-8                   = 9;
-ws-icon-9                   = 10;
+ws-icon-5                   = 6;6
+ws-icon-6                   = 7;7
+ws-icon-7                   = 8;
+ws-icon-8                   = 9;
 
 label-focused-font = 1
 label-unfocused-font = 1
