@@ -2,3 +2,5 @@
 
 polybar middle &
 polybar right &
+
+compton -b -f &
