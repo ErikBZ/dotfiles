@@ -186,4 +186,3 @@ exec --no-startup-id firefox
 exec --no-startup-id discord
 exec --no-startup-id spotify
 
-exec --no-startup-id compton -b -f
