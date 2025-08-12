@@ -1,9 +1,13 @@
+general.import = ["nightowl.toml"]
 [font]
-size = 10.0
+size = 12.0
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "DepartureMono Nerd Font"
 style = "Regular"
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/tmux"
+
+[env]
+  TERM = "xterm-256color"
